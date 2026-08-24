@@ -1,0 +1,24 @@
+Item,Qty,Purpose,Unit Cost USD,Line Total USD,Cost Source,Vendor,Link,Notes
+DFRobot SEN0680 RS485 Fluorescence Dissolved Oxygen Sensor (Freshwater),1,"Dissolved oxygen and temperature, 0-20 mg/L, ModBus-RTU, IP68, 316 stainless probe",199,199,List price - NOT on cost sheet,DFRobot,https://wiki.dfrobot.com/SKU_SEN0680_RS485_Dissolved_Oxygen_Sensor_Freshwater,Also at DigiKey: https://www.digikey.com/en/products/detail/dfrobot/SEN0680/28531158 . Factory pre-calibrated; zero and full-scale recalibration via register writes.
+DFRobot DFR0845 Active Isolated RS485-to-UART Adapter,1,Bridges the Modbus DO sensor to the ESP32 and supplies 12V to the probe,14,14,Estimate - NOT on cost sheet,DFRobot,,T/R lines are easy to reverse - swapped pins hold the bus at ~1V and the sensor returns zero bytes with no error.
+Heltec WiFi LoRa 32 V3 (ESP32-S3 + SX1262) 2-pack,2,Boat sensor pod and shore base station,19.5,38.99,Cost sheet,Heltec,https://store.rokland.com/products/heltec-wifi-lora-32v3,"915 MHz (US). Flash as generic ESP32S3 Dev Module, Flash Size 8MB, partition scheme with SPIFFS."
+915 MHz LoRa antenna,1,Telemetry link between boat and shore,12.99,12.99,Cost sheet,,,
+Betian 9th Gen Beidou BK-250P GPS module,1,Position fix stamped onto every sensor reading,29.88,29.88,Cost sheet,Betian,,"TX line to GPIO 26 - avoid GPIO 46, it is a strapping pin and blocks USB uploads."
+ApisQueen U2 12V Underwater Thruster (CCW),1,"Port-side propulsion, differential skid steer",43.98,43.98,Cost sheet,ApisQueen,https://www.underwaterthruster.com/products/apisqueen-u2-12v-150w-underwaterthruster-with-esc-5v-1a-bec-output-for-rov-boat,"12-16V (3-4S LiPo), 150W, composite housing, fresh and salt water rated."
+ApisQueen U2 12V Underwater Thruster (CW),1,"Starboard-side propulsion, differential skid steer",43.98,43.98,Cost sheet,ApisQueen,https://www.underwaterthruster.com/products/apisqueen-u2-12v-150w-underwaterthruster-with-esc-5v-1a-bec-output-for-rov-boat,
+DH 40A bidirectional ESC,2,"Thruster drive, forward and reverse",21.99,43.98,Cost sheet,,,Do NOT connect the red BEC wire from the servo lead to the FC servo rail - it backfeeds 5V. Signal and ground only.
+CoreWing F405 Wing V2 flight controller,1,"Runs ArduRover 4.6.3, autonomous GPS waypoint missions",45,45,Estimate - NOT on cost sheet,,,Compass must be calibrated in its final mounted position or Auto mode picks a random heading on mode switch.
+3S LiPo battery (propulsion),2,"One per hull, wired in parallel",30,60,Estimate - NOT on cost sheet,,,Endurance approximately 45-65 minutes per survey.
+LiPo battery (sensor pod),1,Powers the boat-side Heltec V3,12.99,12.99,Cost sheet,,,
+RadioMaster T8L transmitter + ELRS receiver,1,Manual override and failsafe control,45,45,Estimate - NOT on cost sheet,,,
+Wire,1,Power and signal harness throughout the vessel,29,29,Cost sheet,,,
+Screws and fasteners,1,Hull assembly and component mounting,28.99,28.99,Cost sheet,,,
+Metal rods,1,Structural spars and mounts,8.49,8.49,Cost sheet,,,
+Rope,1,Tether and recovery line,15,15,Cost sheet,,,
+Fiberglass cloth,1,Hull layup outer shell,18,18,Cost sheet,Local / hardware store,,Expect hull-to-hull dimensional variation in a hand layup.
+Epoxy resin and hardener,1,"Hull layup, 5:1 resin to hardener, ~1 hour working time",66,66,Cost sheet,Local / hardware store,,Peel ply as the final sacrificial layer makes sanding far easier once cured.
+Plywood (1/4 inch),1,Hull side panels over the printed bilge,20,20,Estimate - NOT on cost sheet,Local / hardware store,,
+Fairing compound,1,Fills voids between plywood and printed bilge before layup,25,25,Estimate - NOT on cost sheet,Local / hardware store,,
+3D printing resin and filament,1,"Printed bilge sections, brackets, electronics trays, thruster mounts",30,30,Estimate - NOT on cost sheet,Printed in-house,,Elegoo Saturn 4 Ultra resin plus FDM. Source CAD and STLs in hardware/.
+Marine paint - orange and white,1,High-visibility finish,25,25,Estimate - NOT on cost sheet,Local / hardware store,,Visibility matters at 200 m from shore.
+TOTAL,,,,855.27,,,,$392.27 verified against the project cost sheet; the remainder is estimated and needs confirming.
